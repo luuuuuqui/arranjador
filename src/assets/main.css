@@ -1,0 +1,68 @@
+/*
+  oi, dani (ou qualquer outra pessoa que estiver lendo esse arquivo css)!
+  parte desse arquivo css foi gerado utilizando o realtimecolors.com (ferramenta criada pela @juxtopposed), por isso ele pode parecer um pouco confuso (e até meio estranho).
+  recomendo bastante que você dê uma olhada lá, especialmente se você precisar de testar uma paleta de cores ou fontes de maneira rápida e fácil :)
+
+  aqui tá o link para a paleta de cores e fontes que eu utilizei nesse css:
+  https://www.realtimecolors.com/?colors=f3f7f5-080C0A-33cc99-335566-11ee77&fonts=Geologica-Geologica
+*/
+
+@import url("https://fonts.googleapis.com/css?family=Geologica:700|Geologica:400");
+
+:root {
+  --text: #f3f7f5;
+  --background: #040606;
+  --primary: #33cc99;
+  --secondary: #004499;
+  --accent: #11ee78;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--secondary);
+  color: var(--text);
+}
+
+body {
+  font-family: "Geologica";
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Geologica";
+  font-weight: 700;
+}
+
+html {
+  font-size: 100%;
+} /* 16px */
+
+h1 {
+  font-size: 4.21rem; /* 67.36px */
+}
+
+h2 {
+  font-size: 3.158rem; /* 50.56px */
+}
+
+h3 {
+  font-size: 2.369rem; /* 37.92px */
+}
+
+h4 {
+  font-size: 1.777rem; /* 28.48px */
+}
+
+h5 {
+  font-size: 1.333rem; /* 21.28px */
+}
+
+small {
+  font-size: 0.75rem; /* 12px */
+}
