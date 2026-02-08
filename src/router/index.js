@@ -23,4 +23,9 @@ const router = createRouter({
   routes,
 });
 
+router.beforeEach((to, from, next) => {
+  document.title = "Lucas Duarte - " + (to.meta.title || "oioioi");
+  next();
+});
+
 export default router;
