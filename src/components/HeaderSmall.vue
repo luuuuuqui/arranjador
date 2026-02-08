@@ -124,6 +124,10 @@
 
 #headernav:hover .nav-link.router-link-active:not(:hover),
 #headernav:hover .nav-link.router-link-exact-active:not(:hover) {
-  color: color-mix(in srgb, var(--primary), var(--secondary)) !important; 
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+#headernav:hover .nav-link:not(:hover) {
+  color: rgba(255, 255, 255, 0.4);
 }
 </style>
