@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from "vue-router"; // <-- troquei aqui
+import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 
 const routes = [
@@ -6,6 +6,7 @@ const routes = [
     path: "/",
     name: "home",
     component: HomeView,
+    meta: { title: "Início" },
   },
   {
     path: "/about",
@@ -13,13 +14,8 @@ const routes = [
     component: function () {
       return import("../views/AboutView.vue");
     },
+    meta: { title: "Sobre Mim" },
   },
-  // Adicione suas rotas do header aqui também:
-  // {
-  //   path: "/arranjos",
-  //   name: "arranjos",
-  //   component: () => import("../views/ArranjosView.vue"),
-  // },
 ];
 
 const router = createRouter({
