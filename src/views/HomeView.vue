@@ -1,18 +1,20 @@
 <template>
+  <HeaderBlur />
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Hero title="Início" description="Bem-vindo ao meu site" image="https://via.placeholder.com/150" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Hero from '@/components/Hero.vue'
+import HeaderBlur from '@/components/HeaderBlur.vue'
 
 export default {
   name: 'HomeView',
   components: {
-    HelloWorld
+    HeaderBlur,
+    Hero
   }
 }
 </script>
