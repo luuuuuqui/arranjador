@@ -1,6 +1,6 @@
-<template>
-  <a class="arrangementItem" :href="arrangement.href" draggable="false" @dragstart.prevent>
-    <div class="arrangementContent">
+﻿<template>
+  <div class="arrangementItem">
+    <a class="arrangementContent" :href="arrangement.href" draggable="false" @dragstart.prevent>
       <div class="arrangementTitles">
         <div class="arrangementTitle">{{ arrangement.title }}</div>
         <div class="arrangementsSubtitle">{{ arrangement.subtitle }}</div>
@@ -28,8 +28,8 @@
           </ArrangementPill>
         </div>
       </div>
-    </div>
-  </a>
+    </a>
+  </div>
 </template>
 
 <script>
@@ -50,42 +50,43 @@ export default {
 </script>
 
 <style scoped>
+* {
+  border: 0;
+}
+
 .arrangementItem {
   --padding: 40px;
 
   margin: 0;
   padding: 0;
   border: 0;
-
-  display: flex;
-  width: min(960px, 100%);
-  background-color: var(--surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: 20px;
-  color: var(--text);
-  text-decoration: none;
-  box-sizing: border-box;
-  transition:
-    background-color var(--transition-fast) var(--transition-ease),
-    border-color var(--transition-fast) var(--transition-ease),
-    transform var(--transition-fast) var(--transition-ease),
-    box-shadow var(--transition-fast) var(--transition-ease);
-  user-select: text;
-  -webkit-user-select: text;
-
-  &:hover {
-    background-color: var(--surface-hover);
-    transform: translateY(-1px);
-    box-shadow: 0 8px 22px var(--shadow);
-  }
+  width: min(950px, 100%);
 
   .arrangementContent {
     display: flex;
-    flex-direction: column;
     width: 100%;
     gap: 20px;
     min-width: 0;
     padding: var(--padding);
+    background-color: var(--surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 20px;
+    color: var(--text);
+    text-decoration: none;
+    box-sizing: border-box;
+    transition:
+      background-color var(--transition-fast) var(--transition-ease),
+      border-color var(--transition-fast) var(--transition-ease),
+      transform var(--transition-fast) var(--transition-ease),
+      box-shadow var(--transition-fast) var(--transition-ease);
+    user-select: text;
+    -webkit-user-select: text;
+
+    &:hover {
+      background-color: var(--surface-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 22px var(--shadow);
+    }
   }
 
   .arrangementTitles {
@@ -94,6 +95,7 @@ export default {
     text-align: left;
     gap: 4px;
     min-width: 0;
+    width: 240px;
     color: var(--text);
   }
 
