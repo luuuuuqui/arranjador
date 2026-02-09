@@ -18,18 +18,18 @@
 
   --shadow: color-mix(in srgb, #000 30%, transparent);
 
-  --text-8: color-mix(in srgb, var(--text) 8%, transparent);
-  --text-10: color-mix(in srgb, var(--text) 10%, transparent);
-  --text-12: color-mix(in srgb, var(--text) 12%, transparent);
-  --text-15: color-mix(in srgb, var(--text) 15%, transparent);
+  --tone-8: color-mix(in srgb, var(--text) 8%, transparent);
+  --tone-10: color-mix(in srgb, var(--text) 10%, transparent);
+  --tone-12: color-mix(in srgb, var(--text) 12%, transparent);
+  --tone-15: color-mix(in srgb, var(--text) 15%, transparent);
   --text-50: color-mix(in srgb, var(--text) 50%, transparent);
 
-  --btn-bg: var(--text-12);
-  --surface: var(--text-10);
-  --surface-hover: var(--text-15);
-  --border-subtle: var(--text-15);
+  --btn-bg: var(--tone-12);
+  --surface: var(--tone-10);
+  --surface-hover: var(--tone-15);
+  --border-subtle: var(--tone-15);
   --muted-text: var(--text-50);
-  --header-border: var(--text-8);
+  --header-border: var(--tone-8);
 
   --transition-ease: cubic-bezier(.2, 0, 0, 1);
   --transition-fast: .25s;
@@ -44,6 +44,11 @@
   --accent: #11ee78;
 
   --shadow: color-mix(in srgb, #000 15%, transparent);
+  --tone-8: color-mix(in srgb, var(--text) 8%, transparent);
+  --tone-10: color-mix(in srgb, var(--text) 10%, transparent);
+  --tone-12: color-mix(in srgb, var(--text) 12%, transparent);
+  --tone-15: color-mix(in srgb, var(--text) 15%, transparent);
+  --border-subtle: color-mix(in srgb, var(--text) 22%, transparent);
   --muted-text: color-mix(in srgb, var(--text) 28%, transparent);
 }
 

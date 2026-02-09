@@ -62,7 +62,7 @@ export default {
     gap: 20px;
     min-width: 0;
     padding: var(--padding);
-    background-color: var(--tone-10);
+    background-color: var(--tone-10, var(--surface));
     border: 1px solid var(--border-subtle);
     border-radius: 20px;
     color: var(--text);
@@ -77,7 +77,7 @@ export default {
     -webkit-user-select: text;
 
     &:hover {
-      background-color: var(--tone-10-strong);
+      background-color: var(--tone-15, var(--surface-hover));
       transform: translateY(-1px);
       box-shadow: 0 8px 22px var(--shadow);
     }
@@ -125,5 +125,14 @@ export default {
     gap: 10px;
     width: 100%;
   }
+}
+
+:global(body.lightmode) .arrangementItem .arrangementContent {
+  background-color: color-mix(in srgb, var(--text) 6%, transparent);
+  border-color: color-mix(in srgb, var(--text) 22%, transparent);
+}
+
+:global(body.lightmode) .arrangementItem .arrangementContent:hover {
+  background-color: color-mix(in srgb, var(--text) 10%, transparent);
 }
 </style>
