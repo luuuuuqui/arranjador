@@ -1,6 +1,6 @@
 <template>
   <div class="default-layout">
-    <HeaderSmall />
+    <AppHeader />
     <main>
       <router-view />
     </main>
@@ -8,5 +8,5 @@
 </template>
 
 <script setup>
-import HeaderSmall from '@/components/HeaderSmall.vue'
+import AppHeader from '@/components/AppHeader.vue'
 </script>

@@ -11,7 +11,7 @@ const routes = [
     component: HomeView,
     meta: {
       title: "Início",
-      hideHeader: true
+      useBlurHeader: true
     },
   },
   {
@@ -22,7 +22,7 @@ const routes = [
     },
     meta: {
       title: "Sobre Mim",
-      hideHeader: false
+      useBlurHeader: false
     },
   },
   {
@@ -33,7 +33,7 @@ const routes = [
     },
     meta: {
       title: "Arranjos",
-      hideHeader: true
+      useBlurHeader: true
     },
   },
   {
@@ -44,7 +44,7 @@ const routes = [
     },
     meta: {
       title: "Contato",
-      hideHeader: true
+      useBlurHeader: true
     },
   },
 ];

@@ -1,12 +1,10 @@
 <template>
-  <HeaderSmall v-if="!$route.meta.hideHeader" />
-  <HeaderBlur v-if="$route.meta.hideHeader" />
+  <AppHeader :blur="$route.meta.useBlurHeader" />
   <router-view />
 </template>
 
 <script setup>
-import HeaderSmall from "./components/HeaderSmall.vue";
-import HeaderBlur from "./components/HeaderBlur.vue";
+import AppHeader from "./components/AppHeader.vue";
 </script>
 
 <style>
