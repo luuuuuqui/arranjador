@@ -128,11 +128,11 @@ export default {
 }
 
 :global(body.lightmode) .arrangementItem .arrangementContent {
-  background-color: color-mix(in srgb, var(--text) 6%, transparent);
-  border-color: color-mix(in srgb, var(--text) 22%, transparent);
+  background-color: color-mix(in srgb, var(--background) 94%, var(--text));
+  border-color: color-mix(in srgb, var(--background) 78%, var(--text));
 }
 
 :global(body.lightmode) .arrangementItem .arrangementContent:hover {
-  background-color: color-mix(in srgb, var(--text) 10%, transparent);
+  background-color: color-mix(in srgb, var(--background) 90%, var(--text));
 }
 </style>

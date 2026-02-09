@@ -39,4 +39,9 @@ export default {
     margin-right: 5px;
   }
 }
+
+:global(body.lightmode) .arrangementPill {
+  background: color-mix(in srgb, var(--background) 90%, var(--text));
+  box-shadow: 2px 2px 2px color-mix(in srgb, #000 8%, transparent);
+}
 </style>
