@@ -1,6 +1,6 @@
 ﻿<template>
   <div class="arrangements">
-    <Hero title="Arranjos" description="Aqui voce pode encontrar todos os arranjos disponiveis para compra." />
+    <Hero title="Arranjos" description="Nesta página você poderá encontrar todos os arranjos disponiveis para compra." />
     <div class="arrangementsList">
       <ArrangementsListItem
         v-for="arrangement in arrangements"
