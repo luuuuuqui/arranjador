@@ -44,7 +44,7 @@ const routes = [
     },
     meta: {
       title: "Contato",
-      hideHeader: false
+      hideHeader: true
     },
   },
 ];
