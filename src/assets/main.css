@@ -17,6 +17,12 @@
   --accent: #11ee78;
 }
 
+::selection,
+::-moz-selection {
+  background-color: var(--accent);
+  color: var(--background);
+}
+
 html,
 body {
   margin: 0;
