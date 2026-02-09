@@ -1,6 +1,6 @@
 <template>
   <div class="arrangements">
-    <Hero title="Arranjos" description="Aqui você pode encontrar todos os arranjos disponíveis para compra." image="https://via.placeholder.com/150" />
+    <Hero title="Arranjos" description="Aqui você pode encontrar todos os arranjos disponíveis para compra." />
     <div class="arrangements-list">
       <arrangements-list-item v-for="arrangement in arrangements" :key="arrangement.id" :arrangement="arrangement" />
     </div>
@@ -31,10 +31,11 @@ export default {
 </script>
 
 <style scoped>
-.arrangements {
+.arrangementsList {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 20px;
+    padding: 40px;
 }
 </style>
