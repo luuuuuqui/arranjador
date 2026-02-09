@@ -1,8 +1,12 @@
-<template>
+﻿<template>
   <div class="arrangements">
-    <Hero title="Arranjos" description="Aqui você pode encontrar todos os arranjos disponíveis para compra." />
+    <Hero title="Arranjos" description="Aqui voce pode encontrar todos os arranjos disponiveis para compra." />
     <div class="arrangementsList">
-        <ArrangementsListItem />
+      <ArrangementsListItem
+        v-for="arrangement in arrangements"
+        :key="arrangement.id"
+        :arrangement="arrangement"
+      />
     </div>
   </div>
 </template>
@@ -10,32 +14,28 @@
 <script>
 import Hero from '../components/Hero.vue';
 import ArrangementsListItem from '../components/ArrangementsListItem.vue';
-import HeaderBlur from '../components/HeaderBlur.vue';
+import arrangementsData from '@/data/arrangements.json';
+
 export default {
-    name: 'ArrangementsView',
-    components: {
-        Hero,
-        ArrangementsListItem,
-        HeaderBlur
-    },
-    data() {
-        return {
-            arrangements: [
-                { id: 1, title: 'Arranjo 1', description: 'Descrição do arranjo 1', image: 'https://via.placeholder.com/150' },
-                { id: 2, title: 'Arranjo 2', description: 'Descrição do arranjo 2', image: 'https://via.placeholder.com/150' },
-                { id: 3, title: 'Arranjo 3', description: 'Descrição do arranjo 3', image: 'https://via.placeholder.com/150' }
-            ]
-        }
-    }
-}
+  name: 'ArrangementsView',
+  components: {
+    Hero,
+    ArrangementsListItem
+  },
+  data() {
+    return {
+      arrangements: arrangementsData
+    };
+  }
+};
 </script>
 
 <style scoped>
 .arrangementsList {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
 }
 </style>

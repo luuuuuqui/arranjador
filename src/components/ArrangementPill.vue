@@ -28,7 +28,8 @@ export default {
     font-weight: 500;
     line-height: 1;
     cursor: pointer;
-    
+    box-shadow: 2px 2px 2px #00000033;
+
     &:hover {
         background-color: var(--secondary);
     }
