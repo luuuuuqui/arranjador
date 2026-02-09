@@ -47,6 +47,7 @@ const backgroundImage = computed(() => {
   height: calc(100vh - 60px);
   max-height: 1080px;
   min-height: 600px;
+  margin-bottom: 20px;
   /* fallback para telas menores */
 
   /* Background com a imagem de partitura */
