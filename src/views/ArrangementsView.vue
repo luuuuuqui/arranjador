@@ -1,5 +1,4 @@
 <template>
-  <HeaderBlur />
   <div class="arrangements">
     <Hero title="Arranjos" description="Aqui você pode encontrar todos os arranjos disponíveis para compra." image="https://via.placeholder.com/150" />
     <div class="arrangements-list">
