@@ -1,21 +1,16 @@
-﻿<template>
+<template>
   <div class="arrangementsView">
-    <Hero title="Arranjos" description="Nesta página você poderá encontrar todos os arranjos disponiveis para compra." />
+    <Hero title="Arranjos"
+      description="Nesta página você poderá encontrar todos os arranjos disponiveis para compra." />
     <div class="arrangementsViewList">
       <div class="arrangementsColumn">
-        <ArrangementsListItem
-          v-for="arrangement in leftColumnArrangements"
-          :key="arrangement.id"
-          :arrangement="arrangement"
-        />
+        <ArrangementsListItem v-for="arrangement in leftColumnArrangements" :key="arrangement.id"
+          :arrangement="arrangement" />
       </div>
 
       <div class="arrangementsColumn">
-        <ArrangementsListItem
-          v-for="arrangement in rightColumnArrangements"
-          :key="arrangement.id"
-          :arrangement="arrangement"
-        />
+        <ArrangementsListItem v-for="arrangement in rightColumnArrangements" :key="arrangement.id"
+          :arrangement="arrangement" />
       </div>
     </div>
   </div>

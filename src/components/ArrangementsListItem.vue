@@ -9,21 +9,15 @@
 
       <div class="arrangementMeta">
         <div class="arrangementMetaRow">
-          <ArrangementPill
-            v-for="(instrument, index) in arrangement.instruments"
-            :key="`instrument-${arrangement.id}-${index}`"
-            :icon="instrument.icon"
-          >
+          <ArrangementPill v-for="(instrument, index) in arrangement.instruments"
+            :key="`instrument-${arrangement.id}-${index}`" :icon="instrument.icon">
             {{ instrument.label }}
           </ArrangementPill>
         </div>
 
         <div class="arrangementMetaRow">
-          <ArrangementPill
-            v-for="(format, index) in arrangement.formats"
-            :key="`format-${arrangement.id}-${index}`"
-            :icon="format.icon"
-          >
+          <ArrangementPill v-for="(format, index) in arrangement.formats" :key="`format-${arrangement.id}-${index}`"
+            :icon="format.icon">
             {{ format.label }}
           </ArrangementPill>
         </div>

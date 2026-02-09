@@ -1,8 +1,5 @@
 <template>
-  <section
-    class="heroSection"
-    :style="{ backgroundImage }"
-  >
+  <section class="heroSection" :style="{ backgroundImage }">
     <div class="heroContent">
       <h1 class="heroTitle">{{ title }}</h1>
       <p class="heroDescription">{{ description }}</p>
@@ -49,13 +46,14 @@ const backgroundImage = computed(() => {
   width: 100%;
   height: 100vh;
   max-height: 1080px;
-  min-height: 600px; /* fallback para telas menores */
-  
+  min-height: 600px;
+  /* fallback para telas menores */
+
   /* Background com a imagem de partitura */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  
+
   /* Overlay escuro para melhor contraste do texto */
   display: flex;
   align-items: center;
@@ -77,14 +75,16 @@ const backgroundImage = computed(() => {
   .heroTitle {
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 700;
-    color: var(--accent); /* #11ee78 - verde brilhante */
+    color: var(--accent);
+    /* #11ee78 - verde brilhante */
     margin: 0 0 0.5rem 0;
     letter-spacing: -0.02em;
   }
 
   .heroDescription {
     font-size: clamp(0.875rem, 1.5vw, 1rem);
-    color: var(--text); /* #f3f7f5 - branco/cinza claro */
+    color: var(--text);
+    /* #f3f7f5 - branco/cinza claro */
     margin: 0;
     line-height: 1.5;
     opacity: 0.9;
