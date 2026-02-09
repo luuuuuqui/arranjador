@@ -20,7 +20,7 @@ export default {
 <style scoped>
 .arrangementPill {
     border: none;
-    background: #8080801a;
+    background: var(--surface);
     color: var(--text);
     border-radius: 100px;
     padding: 6px 12px;
@@ -28,7 +28,7 @@ export default {
     font-weight: 500;
     line-height: 1;
     cursor: pointer;
-    box-shadow: 2px 2px 2px #00000033;
+    box-shadow: 2px 2px 2px var(--shadow);
 
     &:hover {
         color: var(--background);

@@ -4,7 +4,7 @@
   recomendo bastante que você dê uma olhada lá, especialmente se você precisar de testar uma paleta de cores ou fontes de maneira rápida e fácil :)
 
   aqui tá o link para a paleta de cores e fontes que eu utilizei nesse css:
-  https://www.realtimecolors.com/?colors=f3f7f5-080C0A-33cc99-335566-11ee77&fonts=Geologica-Geologica
+  https://www.realtimecolors.com/?colors=f3f7f5-080C0A-33cc99-004499-11ee77&fonts=Geologica-Geologica
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&display=swap');
@@ -15,6 +15,47 @@
   --primary: #33cc99;
   --secondary: #004499;
   --accent: #11ee78;
+
+  --shadow: color-mix(in srgb, #000 30%, transparent);
+
+  --text-8: color-mix(in srgb, var(--text) 8%, transparent);
+  --text-10: color-mix(in srgb, var(--text) 10%, transparent);
+  --text-12: color-mix(in srgb, var(--text) 12%, transparent);
+  --text-15: color-mix(in srgb, var(--text) 15%, transparent);
+  --text-50: color-mix(in srgb, var(--text) 50%, transparent);
+
+  --btn-bg: var(--text-12);
+  --surface: var(--text-10);
+  --surface-hover: var(--text-15);
+  --border-subtle: var(--text-15);
+  --muted-text: var(--text-50);
+  --header-border: var(--text-8);
+
+  --transition-ease: cubic-bezier(.2,0,0,1);
+  --transition-fast: .25s;
+  --transition-base: .5s;
+}
+
+.lightmode {
+  --text: #080c0a;
+  --background: #f3f7f5;
+  --primary: #33cc99;
+  --secondary: #66abff;
+  --accent: #11ee78;
+
+  --shadow: color-mix(in srgb, #000 15%, transparent);
+  --muted-text: color-mix(in srgb, var(--text) 28%, transparent);
+}
+
+.darkmode {
+  --text: #f3f7f5;
+  --background: #080C0A;
+  --primary: #33cc99;
+  --secondary: #004499;
+  --accent: #11ee78;
+  
+  --shadow: color-mix(in srgb, #000 30%, transparent);
+  --muted-text: var(--text-50);
 }
 
 ::selection,
@@ -34,6 +75,9 @@ body {
 
 body {
   font-family: "Geologica";
+  transition:
+    background-color var(--transition-base) var(--transition-ease),
+    color var(--transition-base) var(--transition-ease);
 }
 
 h1,
@@ -71,4 +115,39 @@ h5 {
 
 small {
   font-size: 0.75rem; /* 12px */
+}
+
+a,
+button,
+input,
+select,
+textarea {
+  transition:
+    color var(--transition-fast) var(--transition-ease),
+    background-color var(--transition-fast) var(--transition-ease),
+    border-color var(--transition-fast) var(--transition-ease),
+    box-shadow var(--transition-fast) var(--transition-ease),
+    transform var(--transition-fast) var(--transition-ease);
+}
+
+body,
+body *,
+body *::before,
+body *::after {
+  transition-property: color, background-color, border-color, box-shadow, fill, stroke;
+  transition-duration: var(--transition-base);
+  transition-timing-function: var(--transition-ease);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }

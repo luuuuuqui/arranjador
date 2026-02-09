@@ -55,20 +55,25 @@ export default {
 
   display: flex;
   width: min(960px, 100%);
-  background-color: #8080801a;
-  border: 1px solid #00000014;
+  background-color: var(--surface);
+  border: 1px solid var(--border-subtle);
   border-radius: 20px;
-  color: #111;
+  color: var(--text);
   text-decoration: none;
   box-sizing: border-box;
-  transition: background-color 120ms ease, transform 120ms ease;
+  transition:
+    background-color var(--transition-fast) var(--transition-ease),
+    border-color var(--transition-fast) var(--transition-ease),
+    transform var(--transition-fast) var(--transition-ease),
+    box-shadow var(--transition-fast) var(--transition-ease);
   user-select: text;
   -webkit-user-select: text;
 }
 
 .arrangementItem:hover {
-  background-color: #80808026;
+  background-color: var(--surface-hover);
   transform: translateY(-1px);
+  box-shadow: 0 8px 22px var(--shadow);
 }
 
 .arrangementContent {

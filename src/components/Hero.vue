@@ -66,7 +66,7 @@ const backgroundImage = computed(() => {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(8, 12, 10, 0.85); /* var(--background) com opacidade */
+  background: color-mix(in srgb, var(--background) 80%, transparent);
 }
 
 .arranjos-content {

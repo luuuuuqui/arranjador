@@ -1,11 +1,11 @@
-<template>
+﻿<template>
   <header id="header">
     <div id="header-container">
       <router-link to="/" class="logo-link">
         <h1 class="logo">Kwwala</h1>
         <svg class="wave-underline" viewBox="0 0 1000 10" preserveAspectRatio="none">
           <path d="M0,5 Q50,0 100,5 T200,5 T300,5 T400,5 T500,5 T600,5 T700,5 T800,5 T900,5 T1000,5" 
-                stroke="var(--primary)" 
+                stroke="var(--accent)"
                 stroke-width="3" 
                 fill="none"
                 stroke-linecap="round"/>
@@ -26,24 +26,23 @@
 #header {
   width: 100%;
   height: 120px;
-  /* Posicionamento absoluto sobre o hero */
   position: absolute;
   top: 0;
   left: 0;
   z-index: 100;
-  
-  /* Efeito de glassmorphism/blur como no Figma */
-  background: rgba(10, 10, 10, 0.6);
+  background: color-mix(in srgb, var(--background) 60%, transparent);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  
   display: flex;
   align-items: center;
   box-sizing: border-box;
   padding: 0 40px;
-  /* Remove a transição de transform que era para o scroll fixo */
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px var(--shadow);
+  border-bottom: 1px solid var(--header-border);
+  transition:
+    background var(--transition-base) var(--transition-ease),
+    border-color var(--transition-base) var(--transition-ease),
+    box-shadow var(--transition-base) var(--transition-ease);
 
   #header-container {
     width: 100%;
@@ -67,19 +66,18 @@
         width: 100%;
         height: 10px;
         clip-path: inset(0 100% 0 0);
-        transition: clip-path 1s cubic-bezier(.5,0,0,1);
+        transition: clip-path var(--transition-base) var(--transition-ease);
       }
 
       &:hover .wave-underline {
         clip-path: inset(0 0 0 0);
-        transition: clip-path .5s cubic-bezier(.1,0,0,1);
+        transition: clip-path var(--transition-fast) var(--transition-ease);
       }
     }
 
     .logo {
       font-size: 48px;
       font-weight: 700;
-      /* Cor branca semi-transparente como no Figma */
       color: var(--text);
       margin: 0;
       font-family: "Geologica", sans-serif;
@@ -99,10 +97,11 @@
         position: relative;
         font-size: 16px;
         font-weight: 400;
-        /* Texto branco/cinza claro como no Figma */
         color: var(--text);
         text-decoration: none;
-        transition: all 0.3s ease;
+        transition:
+          color var(--transition-fast) var(--transition-ease),
+          transform var(--transition-fast) var(--transition-ease);
         font-family: "Geologica", sans-serif;
         text-transform: uppercase;
         letter-spacing: 0.5px;
@@ -114,13 +113,12 @@
           left: 0;
           width: 0;
           height: 2px;
-          background: var(--primary);
-          transition: width 0.3s ease;
+          background: var(--accent);
+          transition: width var(--transition-fast) var(--transition-ease);
         }
 
         &.router-link-active,
         &.router-link-exact-active {
-          /* Cor primária para o ativo, mais brilhante */
           color: var(--primary);
           font-weight: 500;
         }
@@ -137,14 +135,12 @@
   }
 }
 
-/* Efeito de hover no nav - quando passar o mouse em qualquer link, 
-   os outros (inclusive o ativo) ficam mais apagados */
 #headernav:hover .nav-link.router-link-active:not(:hover),
 #headernav:hover .nav-link.router-link-exact-active:not(:hover) {
-  color: rgba(255, 255, 255, 0.4) !important;
+  color: var(--muted-text) !important;
 }
 
 #headernav:hover .nav-link:not(:hover) {
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--muted-text);
 }
 </style>

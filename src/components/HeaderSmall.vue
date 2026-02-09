@@ -1,11 +1,11 @@
-<template>
+﻿<template>
   <header id="header">
     <div id="header-container">
       <router-link to="/" class="logo-link">
         <h1 class="logo">Kwwala</h1>
         <svg class="wave-underline" viewBox="0 0 1000 10" preserveAspectRatio="none">
           <path d="M0,5 Q50,0 100,5 T200,5 T300,5 T400,5 T500,5 T600,5 T700,5 T800,5 T900,5 T1000,5" 
-                stroke="var(--primary)" 
+                stroke="var(--accent)"
                 stroke-width="3" 
                 fill="none"
                 stroke-linecap="round"/>
@@ -31,8 +31,11 @@
   align-items: center;
   box-sizing: border-box;
   padding: 0 40px;
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition:
+    transform var(--transition-base) var(--transition-ease),
+    background-color var(--transition-base) var(--transition-ease),
+    box-shadow var(--transition-base) var(--transition-ease);
+  box-shadow: 0 4px 20px var(--shadow);
 
   #header-container {
     width: 100%;
@@ -56,12 +59,12 @@
         width: 100%;
         height: 10px;
         clip-path: inset(0 100% 0 0);
-        transition: clip-path 1s cubic-bezier(.5,0,0,1);
+        transition: clip-path var(--transition-base) var(--transition-ease);
       }
 
       &:hover .wave-underline {
         clip-path: inset(0 0 0 0);
-        transition: clip-path .5s cubic-bezier(.1,0,0,1);
+        transition: clip-path var(--transition-fast) var(--transition-ease);
       }
     }
 
@@ -71,7 +74,7 @@
       color: var(--text);
       margin: 0;
       font-family: "Geologica", sans-serif;
-      transition: color 0.5s ease;
+      transition: color var(--transition-base) var(--transition-ease);
 
       &:hover {
         transition: color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -89,7 +92,9 @@
         font-weight: 400;
         color: var(--text);
         text-decoration: none;
-        transition: color 0.3s ease;
+        transition:
+          color var(--transition-fast) var(--transition-ease),
+          transform var(--transition-fast) var(--transition-ease);
         font-family: "Geologica", sans-serif;
         text-transform: uppercase;
         letter-spacing: 0.5px;
@@ -101,8 +106,8 @@
           left: 0;
           width: 0;
           height: 2px;
-          background: var(--primary);
-          transition: width 0.3s ease;
+          background: var(--accent);
+          transition: width var(--transition-fast) var(--transition-ease);
         }
 
         &.router-link-active,
@@ -124,10 +129,10 @@
 
 #headernav:hover .nav-link.router-link-active:not(:hover),
 #headernav:hover .nav-link.router-link-exact-active:not(:hover) {
-  color: rgba(255, 255, 255, 0.4) !important;
+  color: var(--muted-text) !important;
 }
 
 #headernav:hover .nav-link:not(:hover) {
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--muted-text);
 }
 </style>
