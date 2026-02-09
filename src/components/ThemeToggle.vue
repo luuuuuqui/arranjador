@@ -41,12 +41,12 @@ const { isDarkMode, toggleTheme } = useTheme();
   transition:
     background-color var(--transition-base) var(--transition-ease),
     box-shadow var(--transition-base) var(--transition-ease),
-    transform var(--transition-fast) var(--transition-ease);
+    transform var(--transition-base) var(--transition-ease);
 
   &:hover {
     background: var(--accent);
     box-shadow: 0 6px 18px var(--shadow);
-    transform: translateY(-1px);
+    transform: scale(1.05);
   }
 
   svg {
