@@ -32,7 +32,7 @@ const { isDarkMode, toggleTheme } = useTheme();
   padding: 4px;
   border: none;
   border-radius: 50%;
-  background-color: var(--btn-bg);
+  background-color: var(--tone-12);
   box-shadow: 0 3px 12px var(--shadow);
   display: flex;
   justify-content: center;

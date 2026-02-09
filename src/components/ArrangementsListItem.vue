@@ -68,7 +68,7 @@ export default {
     gap: 20px;
     min-width: 0;
     padding: var(--padding);
-    background-color: var(--surface);
+    background-color: var(--tone-10);
     border: 1px solid var(--border-subtle);
     border-radius: 20px;
     color: var(--text);
@@ -83,7 +83,7 @@ export default {
     -webkit-user-select: text;
 
     &:hover {
-      background-color: var(--surface-hover);
+      background-color: var(--tone-10-strong);
       transform: translateY(-1px);
       box-shadow: 0 8px 22px var(--shadow);
     }

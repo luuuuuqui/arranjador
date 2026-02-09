@@ -168,7 +168,7 @@ defineProps({
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     box-shadow: 0 4px 30px var(--shadow);
-    border-bottom: 1px solid var(--header-border);
+    border-bottom: 1px solid var(--tone-8);
 
     #header-container {
       .headerActions {

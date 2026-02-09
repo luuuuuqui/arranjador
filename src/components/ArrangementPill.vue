@@ -20,7 +20,7 @@ export default {
 <style scoped>
 .arrangementPill {
     border: none;
-    background: var(--surface);
+    background: var(--tone-10);
     color: var(--text);
     border-radius: 100px;
     padding: 6px 12px;
@@ -34,11 +34,9 @@ export default {
         color: var(--background);
         background-color: var(--accent);
     }
-    
+
     span {
         margin-right: 5px;
     }
 }
-
 </style>
-
