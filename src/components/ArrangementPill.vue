@@ -31,7 +31,8 @@ export default {
     box-shadow: 2px 2px 2px #00000033;
 
     &:hover {
-        background-color: var(--secondary);
+        color: var(--background);
+        background-color: var(--accent);
     }
     
     span {
