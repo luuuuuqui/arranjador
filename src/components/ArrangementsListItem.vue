@@ -1,6 +1,6 @@
-﻿<template>
+<template>
   <div class="arrangementItem">
-    <a class="arrangementContent" :href="arrangement.href" draggable="false" @dragstart.prevent>
+    <a class="arrangementContent" :href="`/arranjos/${arrangement.id}`" draggable="false" @dragstart.prevent>
       <div class="arrangementTitles">
         <div class="arrangementTitle">{{ arrangement.title }}</div>
         <div class="arrangementsSubtitle">{{ arrangement.subtitle }}</div>
