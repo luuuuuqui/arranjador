@@ -12,7 +12,8 @@
 
 <script setup>
 import { computed } from 'vue'
-import heroDefault from '@/assets/img/sheetmusic.jpg'
+
+const picsumRandomImage = 'https://picsum.photos/1920/1080'
 
 const props = defineProps({
   title: {
@@ -25,7 +26,7 @@ const props = defineProps({
   },
   image: {
     type: String,
-    default: heroDefault
+    default: picsumRandomImage
   }
 })
 
@@ -33,11 +34,11 @@ const backgroundImage = computed(() => {
   const hasCustomImage = typeof props.image === 'string' && props.image.trim().length > 0
 
   if (!hasCustomImage) {
-    return `url("${heroDefault}")`
+    return `url("${picsumRandomImage}")`
   }
 
-  // Mantem a imagem default como camada de fallback caso a URL externa falhe.
-  return `url("${props.image}"), url("${heroDefault}")`
+  // Keeps the default image as a fallback if an external URL fails.
+  return `url("${props.image}"), url("${picsumRandomImage}")`
 })
 </script>
 
