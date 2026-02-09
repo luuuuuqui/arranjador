@@ -16,7 +16,7 @@
 
       <div class="headerActions">
         <nav id="headernav">
-          <router-link to="/" class="headerNavLink" exact>InÃ­cio</router-link>
+          <router-link to="/" class="headerNavLink" exact>Iní­cio</router-link>
           <router-link to="/arrangements" class="headerNavLink">Arranjos</router-link>
           <router-link to="/about" class="headerNavLink">Sobre</router-link>
           <router-link to="/contact" class="headerNavLink">Contato</router-link>
