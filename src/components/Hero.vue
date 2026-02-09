@@ -46,7 +46,7 @@ const backgroundImage = computed(() => {
 .arranjos-hero {
   position: relative;
 
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   max-height: 1080px;
   min-height: 600px; /* fallback para telas menores */
