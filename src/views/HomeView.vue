@@ -11,7 +11,6 @@ import Hero from '@/components/Hero.vue'
 export default {
   name: 'HomeView',
   components: {
-    HeaderBlur,
     Hero
   }
 }
