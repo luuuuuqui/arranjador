@@ -1,8 +1,8 @@
 <template>
   <div class="arrangements">
     <Hero title="Arranjos" description="Aqui você pode encontrar todos os arranjos disponíveis para compra." />
-    <div class="arrangements-list">
-      <arrangements-list-item v-for="arrangement in arrangements" :key="arrangement.id" :arrangement="arrangement" />
+    <div class="arrangementsList">
+        <ArrangementsListItem />
     </div>
   </div>
 </template>
