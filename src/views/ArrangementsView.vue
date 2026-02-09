@@ -31,11 +31,15 @@ export default {
 </script>
 
 <style scoped>
-.arrangementsList {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 40px;
+.arrangements {
+  .arrangementsList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 0;
+    margin: auto;
+    padding: 40px 0;
+    max-width: 1080px;
+  }
 }
 </style>

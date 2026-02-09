@@ -42,32 +42,36 @@ const { isDarkMode, toggleTheme } = useTheme();
     background-color var(--transition-base) var(--transition-ease),
     box-shadow var(--transition-base) var(--transition-ease),
     transform var(--transition-fast) var(--transition-ease);
-}
 
-.theme-switch:hover {
-  background: var(--accent);
-  box-shadow: 0 6px 18px var(--shadow);
-  transform: translateY(-1px);
-}
+  &:hover {
+    background: var(--accent);
+    box-shadow: 0 6px 18px var(--shadow);
+    transform: translateY(-1px);
+  }
 
-.theme-switch svg {
-  fill: var(--text);
-  transition: fill var(--transition-base) var(--transition-ease);
-}
+  svg {
+    fill: var(--text);
+    transition: fill var(--transition-base) var(--transition-ease);
 
-.theme-switch svg:first-child {
-  display: inline;
-}
+    &:first-child {
+      display: inline;
+    }
 
-.theme-switch svg:last-child {
-  display: none;
-}
+    &:last-child {
+      display: none;
+    }
+  }
 
-.theme-switch.is-dark svg:first-child {
-  display: none;
-}
+  &.is-dark {
+    svg {
+      &:first-child {
+        display: none;
+      }
 
-.theme-switch.is-dark svg:last-child {
-  display: inline;
+      &:last-child {
+        display: inline;
+      }
+    }
+  }
 }
 </style>

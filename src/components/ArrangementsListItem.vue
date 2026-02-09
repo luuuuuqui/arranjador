@@ -51,7 +51,11 @@ export default {
 
 <style scoped>
 .arrangementItem {
-  --padding: 30px;
+  --padding: 40px;
+
+  margin: 0;
+  padding: 0;
+  border: 0;
 
   display: flex;
   width: min(960px, 100%);
@@ -68,62 +72,62 @@ export default {
     box-shadow var(--transition-fast) var(--transition-ease);
   user-select: text;
   -webkit-user-select: text;
-}
 
-.arrangementItem:hover {
-  background-color: var(--surface-hover);
-  transform: translateY(-1px);
-  box-shadow: 0 8px 22px var(--shadow);
-}
+  &:hover {
+    background-color: var(--surface-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 22px var(--shadow);
+  }
 
-.arrangementContent {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  gap: 20px;
-  min-width: 0;
-  padding: var(--padding);
-}
+  .arrangementContent {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    min-width: 0;
+    padding: var(--padding);
+  }
 
-.arrangementTitles {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  gap: 4px;
-  min-width: 0;
-  color: var(--text);
-}
+  .arrangementTitles {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 4px;
+    min-width: 0;
+    color: var(--text);
+  }
 
-.arrangementTitle {
-  font-size: 28px;
-  font-weight: 700;
-  line-height: 1.1;
-  overflow-wrap: anywhere;
-}
+  .arrangementTitle {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.1;
+    overflow-wrap: anywhere;
+  }
 
-.arrangementsSubtitle {
-  font-size: 18px;
-  font-style: italic;
-  font-weight: 200;
-}
+  .arrangementsSubtitle {
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 200;
+  }
 
-.arrangementArtist {
-  font-size: 22px;
-  color: var(--secondary);
-  font-weight: 600;
-}
+  .arrangementArtist {
+    font-size: 22px;
+    color: var(--secondary);
+    font-weight: 600;
+  }
 
-.arrangementMeta {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 100%;
-}
+  .arrangementMeta {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
 
-.arrangementMetaRow {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  width: 100%;
+  .arrangementMetaRow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+  }
 }
 </style>

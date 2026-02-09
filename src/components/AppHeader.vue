@@ -148,37 +148,42 @@ defineProps({
           }
         }
       }
+
+      &:hover {
+        .nav-link.router-link-active:not(:hover),
+        .nav-link.router-link-exact-active:not(:hover),
+        .nav-link:not(:hover) {
+          color: var(--muted-text);
+        }
+      }
     }
   }
-}
 
-#header.header--blur {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  background: color-mix(in srgb, var(--background) 60%, transparent);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 4px 30px var(--shadow);
-  border-bottom: 1px solid var(--header-border);
+  &.header--blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background: color-mix(in srgb, var(--background) 60%, transparent);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 30px var(--shadow);
+    border-bottom: 1px solid var(--header-border);
 
-  #header-container .header-actions {
-    gap: 40px;
+    #header-container {
+      .header-actions {
+        gap: 40px;
+      }
+
+      #headernav {
+        .nav-link {
+          &.router-link-active,
+          &.router-link-exact-active {
+            font-weight: 500;
+          }
+        }
+      }
+    }
   }
-
-  #header-container #headernav .nav-link.router-link-active,
-  #header-container #headernav .nav-link.router-link-exact-active {
-    font-weight: 500;
-  }
-}
-
-#headernav:hover .nav-link.router-link-active:not(:hover),
-#headernav:hover .nav-link.router-link-exact-active:not(:hover) {
-  color: var(--muted-text) !important;
-}
-
-#headernav:hover .nav-link:not(:hover) {
-  color: var(--muted-text);
 }
 </style>

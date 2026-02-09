@@ -60,34 +60,34 @@ const backgroundImage = computed(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-}
 
-.arranjos-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: color-mix(in srgb, var(--background) 80%, transparent);
-}
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: color-mix(in srgb, var(--background) 80%, transparent);
+  }
 
-.arranjos-content {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-}
+  .arranjos-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+  }
 
-.arranjos-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 700;
-  color: var(--accent); /* #11ee78 - verde brilhante */
-  margin: 0 0 0.5rem 0;
-  letter-spacing: -0.02em;
-}
+  .arranjos-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    color: var(--accent); /* #11ee78 - verde brilhante */
+    margin: 0 0 0.5rem 0;
+    letter-spacing: -0.02em;
+  }
 
-.arranjos-description {
-  font-size: clamp(0.875rem, 1.5vw, 1rem);
-  color: var(--text); /* #f3f7f5 - branco/cinza claro */
-  margin: 0;
-  line-height: 1.5;
-  opacity: 0.9;
+  .arranjos-description {
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    color: var(--text); /* #f3f7f5 - branco/cinza claro */
+    margin: 0;
+    line-height: 1.5;
+    opacity: 0.9;
+  }
 }
 </style>
