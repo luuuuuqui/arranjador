@@ -1,9 +1,9 @@
 <template>
-  <header id="header" :class="{ 'header--blur': blur }">
+  <header id="header" :class="{ headerBlur: blur }">
     <div id="header-container">
-      <router-link to="/" class="logo-link">
-        <h1 class="logo">Kwwala</h1>
-        <svg class="wave-underline" viewBox="0 0 1000 10" preserveAspectRatio="none">
+      <router-link to="/" class="headerLogoLink">
+        <h1 class="headerLogo">Kwwala</h1>
+        <svg class="headerWaveUnderline" viewBox="0 0 1000 10" preserveAspectRatio="none">
           <path
             d="M0,5 Q50,0 100,5 T200,5 T300,5 T400,5 T500,5 T600,5 T700,5 T800,5 T900,5 T1000,5"
             stroke="var(--accent)"
@@ -14,12 +14,12 @@
         </svg>
       </router-link>
 
-      <div class="header-actions">
+      <div class="headerActions">
         <nav id="headernav">
-          <router-link to="/" class="nav-link" exact>Início</router-link>
-          <router-link to="/arrangements" class="nav-link">Arranjos</router-link>
-          <router-link to="/about" class="nav-link">Sobre</router-link>
-          <router-link to="/contact" class="nav-link">Contato</router-link>
+          <router-link to="/" class="headerNavLink" exact>InÃ­cio</router-link>
+          <router-link to="/arrangements" class="headerNavLink">Arranjos</router-link>
+          <router-link to="/about" class="headerNavLink">Sobre</router-link>
+          <router-link to="/contact" class="headerNavLink">Contato</router-link>
         </nav>
 
         <ThemeToggle />
@@ -68,10 +68,10 @@ defineProps({
       text-decoration: none;
     }
 
-    .logo-link {
+    .headerLogoLink {
       position: relative;
 
-      .wave-underline {
+      .headerWaveUnderline {
         position: absolute;
         bottom: 0;
         left: 0;
@@ -81,13 +81,13 @@ defineProps({
         transition: clip-path var(--transition-base) var(--transition-ease);
       }
 
-      &:hover .wave-underline {
+      &:hover .headerWaveUnderline {
         clip-path: inset(0 0 0 0);
         transition: clip-path var(--transition-fast) var(--transition-ease);
       }
     }
 
-    .logo {
+    .headerLogo {
       font-size: 48px;
       font-weight: 700;
       color: var(--text);
@@ -100,7 +100,7 @@ defineProps({
       }
     }
 
-    .header-actions {
+    .headerActions {
       display: flex;
       align-items: center;
       gap: 20px;
@@ -111,7 +111,7 @@ defineProps({
       display: flex;
       gap: 40px;
 
-      .nav-link {
+      .headerNavLink {
         position: relative;
         font-size: 16px;
         font-weight: 400;
@@ -150,16 +150,16 @@ defineProps({
       }
 
       &:hover {
-        .nav-link.router-link-active:not(:hover),
-        .nav-link.router-link-exact-active:not(:hover),
-        .nav-link:not(:hover) {
+        .headerNavLink.router-link-active:not(:hover),
+        .headerNavLink.router-link-exact-active:not(:hover),
+        .headerNavLink:not(:hover) {
           color: var(--muted-text);
         }
       }
     }
   }
 
-  &.header--blur {
+  &.headerBlur {
     position: absolute;
     top: 0;
     left: 0;
@@ -171,12 +171,12 @@ defineProps({
     border-bottom: 1px solid var(--header-border);
 
     #header-container {
-      .header-actions {
+      .headerActions {
         gap: 40px;
       }
 
       #headernav {
-        .nav-link {
+        .headerNavLink {
           &.router-link-active,
           &.router-link-exact-active {
             font-weight: 500;

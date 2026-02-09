@@ -1,7 +1,7 @@
 <template>
   <button
-    class="theme-switch"
-    :class="{ 'is-dark': isDarkMode }"
+    class="themeSwitch"
+    :class="{ isDark: isDarkMode }"
     type="button"
     :aria-label="isDarkMode ? 'Ativar tema claro' : 'Ativar tema escuro'"
     @click="toggleTheme"
@@ -26,7 +26,7 @@ const { isDarkMode, toggleTheme } = useTheme();
 </script>
 
 <style scoped>
-.theme-switch {
+.themeSwitch {
   height: 40px;
   width: 40px;
   padding: 4px;
@@ -62,7 +62,7 @@ const { isDarkMode, toggleTheme } = useTheme();
     }
   }
 
-  &.is-dark {
+  &.isDark {
     svg {
       &:first-child {
         display: none;

@@ -1,5 +1,5 @@
 <template>
-  <div class="default-layout">
+  <div class="defaultLayout">
     <AppHeader />
     <main>
       <router-view />

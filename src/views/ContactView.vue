@@ -1,5 +1,5 @@
 <template>
-    <div class="contact">
+    <div class="contactView">
         <hero title="Contato" description="Aqui você pode entrar em contato comigo." />
     </div>
 </template>

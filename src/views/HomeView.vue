@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="homeView">
     <Hero title="Início" description="Bem-vindo ao meu site" />
   </div>
 </template>

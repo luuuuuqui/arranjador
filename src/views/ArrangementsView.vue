@@ -1,7 +1,7 @@
 ﻿<template>
-  <div class="arrangements">
+  <div class="arrangementsView">
     <Hero title="Arranjos" description="Nesta página você poderá encontrar todos os arranjos disponiveis para compra." />
-    <div class="arrangementsList">
+    <div class="arrangementsViewList">
       <ArrangementsListItem
         v-for="arrangement in arrangements"
         :key="arrangement.id"
@@ -31,8 +31,8 @@ export default {
 </script>
 
 <style scoped>
-.arrangements {
-  .arrangementsList {
+.arrangementsView {
+  .arrangementsViewList {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;

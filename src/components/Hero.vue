@@ -1,11 +1,11 @@
 <template>
   <section
-    class="arranjos-hero"
+    class="heroSection"
     :style="{ backgroundImage }"
   >
-    <div class="arranjos-content">
-      <h1 class="arranjos-title">{{ title }}</h1>
-      <p class="arranjos-description">{{ description }}</p>
+    <div class="heroContent">
+      <h1 class="heroTitle">{{ title }}</h1>
+      <p class="heroDescription">{{ description }}</p>
     </div>
   </section>
 </template>
@@ -43,7 +43,7 @@ const backgroundImage = computed(() => {
 </script>
 
 <style scoped>
-.arranjos-hero {
+.heroSection {
   position: relative;
 
   width: 100%;
@@ -68,13 +68,13 @@ const backgroundImage = computed(() => {
     background: color-mix(in srgb, var(--background) 80%, transparent);
   }
 
-  .arranjos-content {
+  .heroContent {
     position: relative;
     z-index: 1;
     text-align: center;
   }
 
-  .arranjos-title {
+  .heroTitle {
     font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 700;
     color: var(--accent); /* #11ee78 - verde brilhante */
@@ -82,7 +82,7 @@ const backgroundImage = computed(() => {
     letter-spacing: -0.02em;
   }
 
-  .arranjos-description {
+  .heroDescription {
     font-size: clamp(0.875rem, 1.5vw, 1rem);
     color: var(--text); /* #f3f7f5 - branco/cinza claro */
     margin: 0;
