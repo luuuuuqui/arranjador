@@ -7,7 +7,7 @@
   https://www.realtimecolors.com/?colors=f3f7f5-080C0A-33cc99-335566-11ee77&fonts=Geologica-Geologica
 */
 
-@import url("https://fonts.googleapis.com/css?family=Geologica:700|Geologica:400");
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&display=swap');
 
 :root {
   --text: #f3f7f5;
