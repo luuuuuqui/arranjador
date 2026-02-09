@@ -4,6 +4,8 @@
     "title": "Chuvas de Graça",
     "subtitle": "001 H.C - Arranjo Orquestral",
     "artist": "Harpa Cristã",
+    "description": "Arranjo orquestral completo para culto e apresentações especiais.",
+    "price": 130,
     "thumb": "https://picsum.photos/200",
     "href": "/arranjos/chuvas-de-graca",
     "instruments": [
@@ -104,6 +106,8 @@
     "title": "Adoração",
     "subtitle": "124 H.C - Arranjo Orquestral",
     "artist": "Harpa Cristã",
+    "description": "Versão orquestral tradicional com dinâmica para conjuntos e orquestras.",
+    "price": 120,
     "thumb": "https://picsum.photos/200",
     "href": "/arranjos/nome-da-musica",
     "instruments": [
@@ -204,6 +208,8 @@
     "title": "Mais Perto Quero Estar",
     "subtitle": "187 H.C - Arranjo Orquestral",
     "artist": "Harpa Cristã",
+    "description": "Arranjo congregacional com escrita equilibrada para todos os naipes.",
+    "price": 125,
     "thumb": "https://picsum.photos/200",
     "href": "/arranjos/mais-perto-quero-estar",
     "instruments": [
@@ -304,6 +310,8 @@
     "title": "Grandioso És Tu",
     "subtitle": "526 H.C - Arranjo Orquestral",
     "artist": "Harpa Cristã",
+    "description": "Arranjo sinfônico com climaxes marcantes e apoio harmônico completo.",
+    "price": 140,
     "thumb": "https://picsum.photos/200",
     "href": "/arranjos/grandioso-es-tu",
     "instruments": [
@@ -404,6 +412,8 @@
     "title": "Porque Ele Vive",
     "subtitle": "545 H.C - Arranjo Orquestral",
     "artist": "Harpa Cristã",
+    "description": "Arranjo orquestral vibrante para momentos de celebração.",
+    "price": 135,
     "thumb": "https://picsum.photos/200",
     "href": "/arranjos/porque-ele-vive",
     "instruments": [
@@ -504,6 +514,8 @@
     "title": "Raridade",
     "subtitle": "Arranjo Orquestral",
     "artist": "Anderson Freire",
+    "description": "Arranjo moderno com base pop e reforço de metais e cordas.",
+    "price": 150,
     "thumb": "https://cdn-images.dzcdn.net/images/cover/215e5e35a255350b1568fe129f2050a6/1900x1900-000000-80-0-0.jpg",
     "href": "/arranjos/raridade",
     "instruments": [
@@ -604,6 +616,8 @@
     "title": "Acalma o Meu Coração",
     "subtitle": "Arranjo Orquestral",
     "artist": "Anderson Freire",
+    "description": "Arranjo sensível para ministrações, com camadas progressivas de orquestra.",
+    "price": 145,
     "thumb": "https://cdn-images.dzcdn.net/images/cover/215e5e35a255350b1568fe129f2050a6/1900x1900-000000-80-0-0.jpg",
     "href": "/arranjos/acalma-o-meu-coracao",
     "instruments": [
@@ -704,6 +718,8 @@
     "title": "Ninguém Explica Deus",
     "subtitle": "Arranjo Orquestral",
     "artist": "Preto no Branco",
+    "description": "Arranjo em formação reduzida, ideal para bandas e pequenos conjuntos.",
+    "price": 100,
     "thumb": "https://i1.sndcdn.com/artworks-oXYO8yIf9bacOyBJ-g81eHg-t500x500.jpg",
     "href": "/arranjos/ninguem-explica-deus",
     "instruments": [
@@ -744,6 +760,8 @@
     "title": "Bondade de Deus",
     "subtitle": "Arranjo Orquestral",
     "artist": "Isaias Saad",
+    "description": "Arranjo contemporâneo com condução melódica e suporte orquestral amplo.",
+    "price": 155,
     "thumb": "https://cdn-images.dzcdn.net/images/cover/b91a39322779d33af50208e7763005d3/0x1900-000000-80-0-0.jpg",
     "href": "/arranjos/bondade-de-deus",
     "instruments": [
@@ -844,6 +862,8 @@
     "title": "Ousado Amor",
     "subtitle": "Arranjo Orquestral",
     "artist": "Isaias Saad",
+    "description": "Arranjo para cordas com textura emotiva e linhas expressivas.",
+    "price": 110,
     "thumb": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRFpRDoF1zcjomz5xRbSohGZ_qXgIGfTpS6Q&s",
     "href": "/arranjos/ousado-amor",
     "instruments": [
