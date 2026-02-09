@@ -15,19 +15,19 @@
 
             <div class="arrangementMeta">
                 <div class="arrangementMetaRow">
-                    <div class="arrangementPill"><span>🎷</span>Sax Alto</div>
-                    <div class="arrangementPill"><span>🎺</span>Trompete</div>
-                    <div class="arrangementPill"><span>🎻</span>Violinos</div>
-                    <div class="arrangementPill"><span>🎸</span>Guitarra</div>
-                    <div class="arrangementPill"><span>🥁</span>Bateria</div>
-                    <div class="arrangementPill">...</div>
+                    <ArrangementPill icon="🎷">Sax Alto</ArrangementPill>
+                    <ArrangementPill icon="🎺">Trompete</ArrangementPill>
+                    <ArrangementPill icon="🎻">Violinos</ArrangementPill>
+                    <ArrangementPill icon="🎸">Guitarra</ArrangementPill>
+                    <ArrangementPill icon="🥁">Bateria</ArrangementPill>
+                    <ArrangementPill>...</ArrangementPill>
                 </div>
 
                 <div class="arrangementMetaRow">
-                    <div class="arrangementPill"><span>📄</span>PDF</div>
-                    <div class="arrangementPill"><span>🎼</span>.mscz</div>
-                    <div class="arrangementPill"><span>🎼</span>.musicxml</div>
-                    <div class="arrangementPill">...</div>
+                    <ArrangementPill icon="📄">PDF</ArrangementPill>
+                    <ArrangementPill icon="🎼">.mscz</ArrangementPill>
+                    <ArrangementPill icon="🎼">.musicxml</ArrangementPill>
+                    <ArrangementPill>...</ArrangementPill>
                 </div>
             </div>
         </div>
@@ -35,7 +35,14 @@
 </template>
 
 <script>
+import ArrangementPill from "./ArrangementPill.vue";
 
+export default {
+    name: "ArrangementsListItem",
+    components: {
+        ArrangementPill,
+    },
+};
 </script>
 
 <style scoped>
@@ -113,26 +120,6 @@
                 flex-wrap: wrap;
                 gap: 10px;
                 justify-content: flex-end;
-    
-                .arrangementPill {
-                    border: none;
-                    background: #8080801a;
-                    color: var(--text);
-                    border-radius: 100px;
-                    padding: 6px 12px;
-                    font-size: 14px;
-                    font-weight: 500;
-                    line-height: 1;
-                    cursor: pointer;
-        
-                    &:hover {
-                        background-color: var(--secondary);
-                    }
-        
-                    span {
-                        margin-right: 5px;
-                    }
-                }
             }
         }
     }
