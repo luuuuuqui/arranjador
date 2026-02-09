@@ -44,7 +44,7 @@ const backgroundImage = computed(() => {
   position: relative;
 
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - 60px);
   max-height: 1080px;
   min-height: 600px;
   /* fallback para telas menores */
