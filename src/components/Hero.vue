@@ -1,5 +1,8 @@
 <template>
-  <section class="arranjos-hero">
+  <section
+    class="arranjos-hero"
+    :style="{ backgroundImage }"
+  >
     <div class="arranjos-content">
       <h1 class="arranjos-title">{{ title }}</h1>
       <p class="arranjos-description">{{ description }}</p>
@@ -8,7 +11,9 @@
 </template>
 
 <script setup>
-// Componente da seção hero de Arranjos
+import { computed } from 'vue'
+import heroDefault from '@/assets/img/sheetmusic.jpg'
+
 const props = defineProps({
   title: {
     type: String,
@@ -17,7 +22,22 @@ const props = defineProps({
   description: {
     type: String,
     required: true
+  },
+  image: {
+    type: String,
+    default: heroDefault
   }
+})
+
+const backgroundImage = computed(() => {
+  const hasCustomImage = typeof props.image === 'string' && props.image.trim().length > 0
+
+  if (!hasCustomImage) {
+    return `url("${heroDefault}")`
+  }
+
+  // Mantem a imagem default como camada de fallback caso a URL externa falhe.
+  return `url("${props.image}"), url("${heroDefault}")`
 })
 </script>
 
@@ -31,22 +51,21 @@ const props = defineProps({
   min-height: 600px; /* fallback para telas menores */
   
   /* Background com a imagem de partitura */
-  background-image: url('https://media.licdn.com/dms/image/v2/C511BAQGIbAX3Dd2jQw/company-background_10000/company-background_10000/0/1584035667583/testing_hero_cover?e=2147483647&v=beta&t=LLL7EhBE1FVHgvJUPOFKJ4CkU2q6rOpF4W-jvb5-RwM');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   
   /* Overlay escuro para melhor contraste do texto */
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: rgba(8, 12, 10, 0.85); /* var(--background) com opacidade */
-  }
-  
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.arranjos-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 12, 10, 0.85); /* var(--background) com opacidade */
 }
 
 .arranjos-content {
