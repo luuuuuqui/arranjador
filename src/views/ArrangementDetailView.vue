@@ -95,12 +95,6 @@ export default {
     box-shadow var(--transition-fast) var(--transition-ease);
 }
 
-.arrangementDetailCard:hover {
-  background-color: var(--tone-15, var(--surface-hover));
-  transform: translateY(-1px);
-  box-shadow: 0 8px 22px var(--shadow);
-}
-
 .arrangementTop {
   display: flex;
   gap: 16px;
