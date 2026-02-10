@@ -1,9 +1,6 @@
-﻿<template>
+<template>
   <div class="homeView">
-    <Hero
-      title="Início"
-      description="Meu site pessoal de arranjos gospel e cristãos"
-    />
+    <Hero title="Início" description="Meu site pessoal de arranjos gospel e cristãos" />
 
     <section class="homeContent">
       <h2>Arranjos gospel e cristãos com identidade</h2>
