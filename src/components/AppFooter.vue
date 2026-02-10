@@ -65,155 +65,200 @@ const currentYear = new Date().getFullYear();
   margin-top: 40px;
   padding: 40px 40px 20px;
   border-top: 1px solid var(--tone-10);
-  background: 
+  background:
     radial-gradient(circle at top left, color-mix(in srgb, var(--secondary) 10%, transparent), transparent 45%),
     radial-gradient(circle at top right, color-mix(in srgb, var(--primary) 10%, transparent), transparent 40%),
     var(--background);
-}
 
-.footerInner {
-  width: 100%;
-  max-width: 1120px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  gap: 96px;
-}
+  .footerInner {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 96px;
+  }
 
-.footerBlock {
-  flex: 0 1 420px;
-  min-width: 260px;
-  text-align: left;
-}
+  .footerBlock {
+    flex: 0 1 420px;
+    min-width: 260px;
+    text-align: left;
+  }
 
-.footerBlockRight {
-  text-align: right;
-}
+  .footerBlockRight {
+    text-align: right;
 
-.footerTitle {
-  font-size: 2.2rem;
-  color: var(--accent);
-  margin: 0 0 20px;
-}
+    .footerContactItem {
+      padding-right: 12px;
+    }
+  }
 
-.footerNav {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-}
+  .footerTitle {
+    font-size: 2.2rem;
+    color: var(--primary);
+    margin: 0 0 20px;
+  }
 
-.footerLink {
-  position: relative;
-  color: var(--text);
-  text-decoration: none;
-  font-size: 1.05rem;
-  padding-left: 12px;
-}
+  .footerNav {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: fit-content;
 
-.footerLink:hover {
-  color: var(--accent);
-}
+    &:hover .footerLink.router-link-active:not(:hover),
+    &:hover .footerLink.router-link-exact-active:not(:hover),
+    &:hover .footerLink:not(:hover) {
+      color: var(--muted-text);
+    }
+  }
 
-.footerLink.router-link-active {
-  color: var(--primary);
-}
+  .footerLink {
+    position: relative;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.05rem;
+    padding-left: 12px;
+    transition:
+      color var(--transition-fast) var(--transition-ease),
+      transform var(--transition-fast) var(--transition-ease);
 
-.footerContactList {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 16px;
-}
+    &::after {
+      content: "";
+      position: absolute;
+      left: 12px;
+      bottom: -4px;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width var(--transition-fast) var(--transition-ease);
+    }
 
-.footerContactItem {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding-left: 0;
-  color: var(--text);
-}
+    &:hover::after {
+      width: calc(100% - 12px);
+    }
 
-.footerBlockRight .footerContactItem {
-  padding-right: 12px;
-}
+    &.router-link-active,
+    &.router-link-exact-active {
+      color: var(--primary);
+    }
 
-.footerContactItem a {
-  color: inherit;
-  text-decoration: none;
-}
+    &.router-link-active:hover,
+    &.router-link-exact-active:hover {
+      color: var(--accent);
+    }
+  }
 
-.footerContactItem a:hover {
-  color: var(--accent);
-}
+  .footerContactList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 16px;
+  }
 
-.footerContactIcon {
-  width: 24px;
-  height: 24px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--primary);
-}
+  .footerContactItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-left: 0;
+    color: var(--text);
 
-.footerContactIcon svg {
-  width: 100%;
-  height: 100%;
-  fill: currentColor;
-}
+    a {
+      position: relative;
+      color: inherit;
+      text-decoration: none;
+      transition: color var(--transition-fast) var(--transition-ease);
 
-.footerCopyright {
-  width: 100%;
-  max-width: 1920px;
-  margin: 40px auto 0;
-  padding-top: 18px;
-  border-top: 1px solid var(--tone-10);
-}
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 0;
+        height: 2px;
+        background: var(--accent);
+        transition: width var(--transition-fast) var(--transition-ease);
+      }
 
-.footerCopyright p {
-  margin: 0;
-  text-align: center;
-  color: var(--muted-text);
-  font-size: 0.95rem;
+      &:hover {
+        color: var(--accent);
+      }
+
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+
+  .footerContactIcon {
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: currentColor;
+    }
+  }
+
+  .footerCopyright {
+    width: 100%;
+    max-width: 1920px;
+    margin: 40px auto 0;
+    padding-top: 18px;
+    border-top: 1px solid var(--tone-10);
+
+    p {
+      margin: 0;
+      text-align: center;
+      color: var(--muted-text);
+      font-size: 0.95rem;
+    }
+  }
 }
 
 @media (max-width: 920px) {
   .appFooter {
     padding: 48px 20px 20px;
-  }
 
-  .footerInner {
-    flex-direction: column;
-    gap: 36px;
-  }
+    .footerInner {
+      flex-direction: column;
+      gap: 36px;
+    }
 
-  .footerBlock {
-    flex: 1;
-    text-align: center;
-  }
+    .footerBlock {
+      flex: 1;
+      text-align: center;
+    }
 
-  .footerBlockRight {
-    text-align: center;
-  }
+    .footerBlockRight {
+      text-align: center;
+    }
 
-  .footerTitle {
-    font-size: 1.85rem;
-  }
+    .footerTitle {
+      font-size: 1.85rem;
+    }
 
-  .footerNav {
-    align-items: center;
-  }
+    .footerNav {
+      align-items: center;
+      margin: 0 auto;
+    }
 
-  .footerContactItem {
-    padding-right: 0;
-    justify-content: center;
-  }
+    .footerContactItem {
+      padding-right: 0;
+      justify-content: center;
+    }
 
-  .footerContactList {
-    align-items: center;
+    .footerContactList {
+      align-items: center;
+    }
   }
 }
 </style>
