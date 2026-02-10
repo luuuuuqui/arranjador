@@ -141,7 +141,9 @@ defineProps({
         }
 
         &:hover {
-          color: var(--accent);
+          &.headerNavLink.router-link-exact-active {
+            color: var(--accent)
+          }
 
           &::after {
             width: 100%;
