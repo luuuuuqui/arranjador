@@ -5,9 +5,9 @@
         <h2 class="footerTitle">Companhia</h2>
         <nav class="footerNav" aria-label="Links do site">
           <router-link class="footerLink" to="/">Inicio</router-link>
-          <router-link class="footerLink" to="/arrangements">Arranjos</router-link>
-          <router-link class="footerLink" to="/about">Sobre</router-link>
-          <router-link class="footerLink" to="/contact">Contato</router-link>
+          <router-link class="footerLink" to="/arranjos">Arranjos</router-link>
+          <router-link class="footerLink" to="/sobre">Sobre</router-link>
+          <router-link class="footerLink" to="/contato">Contato</router-link>
         </nav>
       </section>
 

@@ -1,8 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue"
-import AboutView from "../views/AboutView.vue"
-import ArrangementsView from "../views/ArrangementsView.vue"
-import ContactView from "../views/ContactView.vue"
 
 const routes = [
   {
@@ -15,7 +12,7 @@ const routes = [
     },
   },
   {
-    path: "/about",
+    path: "/sobre",
     name: "about",
     component: function () {
       return import("../views/AboutView.vue");
@@ -26,8 +23,9 @@ const routes = [
     },
   },
   {
-    path: "/arrangements",
+    path: "/arranjos",
     name: "arrangements",
+    alias: ["/arranjos"],
     component: function () {
       return import("../views/ArrangementsView.vue");
     },
@@ -37,7 +35,20 @@ const routes = [
     },
   },
   {
-    path: "/contact",
+    path: "/arranjos/:id(\\d+)",
+    name: "arrangement-detail",
+    alias: ["/arranjos/:id(\\d+)"],
+    component: function () {
+      return import("../views/ArrangementDetailView.vue");
+    },
+    props: true,
+    meta: {
+      title: "Arranjo",
+      useBlurHeader: false
+    },
+  },
+  {
+    path: "/contato",
     name: "contact",
     component: function () {
       return import("../views/ContactView.vue");
