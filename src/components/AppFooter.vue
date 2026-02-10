@@ -51,7 +51,7 @@
     </div>
 
     <div class="footerCopyright">
-            <p>&copy; {{ currentYear }} Kwwala por Lucas Duarte - Todos os direitos reservados.</p>
+      <p>&copy; {{ currentYear }} Kwwala por Lucas Duarte - Todos os direitos reservados.</p>
     </div>
   </footer>
 </template>
