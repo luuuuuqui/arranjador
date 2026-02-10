@@ -1,7 +1,7 @@
 <template>
   <div class="arrangementsView">
-    <Hero title="Arranjos"
-      description="Nesta página você poderá encontrar todos os arranjos disponiveis para compra." />
+    <Hero title="Arranjos" description="Nesta página você poderá encontrar todos os arranjos disponiveis para compra."
+      :image="sheetMusicImage" />
     <div class="arrangementsViewList">
       <div class="arrangementsColumn">
         <ArrangementsListItem v-for="arrangement in leftColumnArrangements" :key="arrangement.id"
@@ -20,6 +20,7 @@
 import Hero from '../components/Hero.vue';
 import ArrangementsListItem from '../components/ArrangementsListItem.vue';
 import arrangementsData from '@/data/arrangements.json';
+import sheetMusicImage from '@/assets/img/sheetmusic.jpg';
 
 export default {
   name: 'ArrangementsView',
@@ -29,7 +30,8 @@ export default {
   },
   data() {
     return {
-      arrangements: arrangementsData
+      arrangements: arrangementsData,
+      sheetMusicImage
     };
   },
   computed: {
