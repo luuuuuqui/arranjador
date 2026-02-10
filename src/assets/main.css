@@ -159,3 +159,22 @@ body {
     }
   }
 }
+
+.appButtonLink {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border-subtle);
+  color: var(--text);
+  text-decoration: none;
+  background: color-mix(in srgb, var(--background) 88%, var(--text) 12%);
+
+  &:hover {
+    background-color: var(--accent);
+    color: var(--background);
+    transform: translateY(-1px);
+  }
+}

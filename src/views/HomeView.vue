@@ -45,6 +45,10 @@
         Explore o catálogo, conheça meu trabalho e escolha os arranjos que melhor atendem à sua
         realidade musical.
       </p>
+      <div class="homeActions">
+        <router-link to="/arranjos" class="appButtonLink">Ver arranjos</router-link>
+        <router-link to="/contato" class="appButtonLink">Entrar em contato</router-link>
+      </div>
     </section>
   </div>
 </template>
@@ -103,6 +107,13 @@ export default {
   .homeClosing {
     margin-top: 10px;
     font-weight: 500;
+  }
+
+  .homeActions {
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+    flex-wrap: wrap;
   }
 
   @media (max-width: 900px) {

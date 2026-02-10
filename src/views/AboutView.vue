@@ -49,8 +49,8 @@
       </p>
 
       <div class="aboutActions">
-        <router-link to="/arranjos" class="aboutLink">Ver arranjos</router-link>
-        <router-link to="/contato" class="aboutLink">Entrar em contato</router-link>
+        <router-link to="/arranjos" class="appButtonLink">Ver arranjos</router-link>
+        <router-link to="/contato" class="appButtonLink">Entrar em contato</router-link>
       </div>
     </section>
   </div>
@@ -124,24 +124,6 @@ export default {
     gap: 12px;
     margin-top: 18px;
     flex-wrap: wrap;
-
-    .aboutLink {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 14px;
-      border-radius: 10px;
-      border: 1px solid var(--border-subtle);
-      color: var(--text);
-      text-decoration: none;
-      background: color-mix(in srgb, var(--background) 88%, var(--text) 12%);
-    }
-
-    .aboutLink:hover {
-      border-color: var(--accent);
-      color: var(--accent);
-      transform: translateY(-1px);
-    }
   }
 
   @media (max-width: 900px) {

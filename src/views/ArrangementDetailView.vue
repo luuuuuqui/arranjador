@@ -38,13 +38,13 @@
         </div>
       </div>
 
-      <router-link to="/arranjos" class="backLink">Voltar para arranjos</router-link>
+      <router-link to="/arranjos" class="backLink appButtonLink">Voltar para arranjos</router-link>
     </section>
 
     <section v-else class="arrangementDetailCard">
       <h1>Arranjo nao encontrado</h1>
       <p>O arranjo com id {{ id }} nao existe no catalogo.</p>
-      <router-link to="/arranjos" class="backLink">Voltar para arranjos</router-link>
+      <router-link to="/arranjos" class="backLink appButtonLink">Voltar para arranjos</router-link>
     </section>
   </main>
 </template>
@@ -204,15 +204,8 @@ export default {
 }
 
 .backLink {
-  display: inline-block;
   margin-top: 18px;
-  color: var(--primary);
   font-weight: 600;
-  text-decoration: none;
-}
-
-.backLink:hover {
-  text-decoration: underline;
 }
 
 :global(body.lightmode) .arrangementDetailCard {
