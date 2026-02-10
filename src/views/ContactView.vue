@@ -1,16 +1,23 @@
 <template>
   <div class="contactView">
-    <hero title="Contato" description="Aqui você pode entrar em contato comigo." />
+    <Hero title="Contato" description="Aqui você pode entrar em contato comigo." :image="contactImage" />
   </div>
 </template>
 
 <script>
 import Hero from '@/components/Hero.vue';
+import contactImage from '@/assets/img/contact.jpg';
 
 export default {
   name: 'ContactView',
   components: {
     Hero
+  },
+  data() {
+    return {
+      contactImage
+    };
   }
 }
 </script>
+
