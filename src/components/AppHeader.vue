@@ -4,13 +4,8 @@
       <router-link to="/" class="headerLogoLink">
         <h1 class="headerLogo">Kwwala</h1>
         <svg class="headerWaveUnderline" viewBox="0 0 1000 10" preserveAspectRatio="none">
-          <path
-            d="M0,5 Q50,0 100,5 T200,5 T300,5 T400,5 T500,5 T600,5 T700,5 T800,5 T900,5 T1000,5"
-            stroke="var(--accent)"
-            stroke-width="3"
-            fill="none"
-            stroke-linecap="round"
-          />
+          <path d="M0,5 Q50,0 100,5 T200,5 T300,5 T400,5 T500,5 T600,5 T700,5 T800,5 T900,5 T1000,5"
+            stroke="var(--accent)" stroke-width="3" fill="none" stroke-linecap="round" />
         </svg>
       </router-link>
 
