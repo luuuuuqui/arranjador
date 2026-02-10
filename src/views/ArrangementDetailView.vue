@@ -16,6 +16,15 @@
           </div>
           <p class="arrangementDescription">{{ arrangement.description }}</p>
           <p class="arrangementPrice">R$ {{ arrangement.price }}</p>
+          <button
+            type="button"
+            class="favoriteToggle appButtonLink"
+            :class="{ favoriteToggleActive: isFavorite }"
+            :aria-pressed="isFavorite"
+            @click="toggleFavorite"
+          >
+            {{ isFavorite ? "Remover dos favoritos" : "Favoritar arranjo" }}
+          </button>
         </div>
       </div>
 
@@ -51,6 +60,10 @@
 
 <script>
 import arrangementsData from "@/data/arrangements.json";
+import {
+  isFavoriteArrangement,
+  toggleFavoriteArrangement,
+} from "@/composables/useFavoriteArrangements";
 
 export default {
   name: "ArrangementDetailView",
@@ -67,6 +80,37 @@ export default {
     arrangement() {
       return arrangementsData.find((item) => item.id === this.arrangementId);
     }
+  },
+  data() {
+    return {
+      isFavorite: false,
+    };
+  },
+  watch: {
+    arrangementId: {
+      immediate: true,
+      handler() {
+        this.updateFavoriteState();
+      },
+    },
+  },
+  methods: {
+    updateFavoriteState() {
+      if (!this.arrangement) {
+        this.isFavorite = false;
+        return;
+      }
+
+      this.isFavorite = isFavoriteArrangement(this.arrangementId);
+    },
+    toggleFavorite() {
+      if (!this.arrangement) {
+        return;
+      }
+
+      const updatedFavoriteIds = toggleFavoriteArrangement(this.arrangementId);
+      this.isFavorite = updatedFavoriteIds.includes(this.arrangementId);
+    },
   }
 };
 </script>
@@ -168,6 +212,17 @@ export default {
   font-size: 24px;
   font-weight: 700;
   color: var(--primary);
+}
+
+.favoriteToggle {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.favoriteToggle.favoriteToggleActive {
+  background-color: var(--accent);
+  color: var(--background);
+  border-color: transparent;
 }
 
 .arrangementBottom {
